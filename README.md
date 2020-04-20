@@ -16,15 +16,40 @@ Install via composer
 composer require aleksei4er/task-news-parser
 ```
 
-### Publish package assets
+### Setup enviroment variables
 
 ```bash
-php artisan vendor:publish --provider="Aleksei4er\TaskNewsParser\ServiceProvider"
+TASK_NEWS_PARSER_NEWSAPI_KEY=YOUR_KEYNAME (visit https://newsapi.org/)
+TASK_NEWS_PARSER_TIMEOUT=15
+TASK_NEWS_PARSER_NEWSAPI_URL=http://newsapi.org/v2/everything
+TASK_NEWS_PARSER_KEYWORDS=bitcoin,litecoin,ripple,dash,ethereum (one article for each keyword by default)
+```
+
+### Run migrations
+
+```bash
+php artisan migrate
+```
+
+### Make sure this lines are uncommented in bootstrap/app.php
+
+```bash
+$app->withFacades();
+$app->withEloquent();
+```
+
+### Register service provider in the same file
+
+```bash
+$app->register(Aleksei4er\TaskNewsParser\ServiceProvider::class);
 ```
 
 ## Usage
 
-CHANGE ME
+You can create schedule for console command or run it manually
+```bash
+php artisan task:newsparser
+```
 
 ## Security
 
