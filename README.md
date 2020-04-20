@@ -48,7 +48,7 @@ $app->register(Aleksei4er\TaskNewsParser\ServiceProvider::class);
 
 You can create schedule for console command or run it manually
 ```bash
-php artisan task:newsparser
+php artisan task:news-parser
 ```
 
 ## Security
