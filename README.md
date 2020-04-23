@@ -51,6 +51,16 @@ You can create schedule for console command or run it manually
 php artisan task:news-parser
 ```
 
+Endpoint to get articles
+
+/api/articles
+
+Also there are three kinds of grouping
+
+/api/articles?groupBy=source
+/api/articles?groupBy=keyword
+/api/articles?groupBy=date
+
 ## Security
 
 If you discover any security related issues, please email 
