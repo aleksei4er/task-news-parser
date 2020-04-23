@@ -18,6 +18,7 @@ class CreateArticlesTable extends Migration
             Schema::create('articles', function (Blueprint $table) {
                 $table->id();
                 $table->unsignedBigInteger('source_id')->nullable();
+                $table->string('keyword');
                 $table->string('author')->nullable();
                 $table->string('title')->nullable();
                 $table->string('description', config('task-news-parser.max_length.description'))->nullable();

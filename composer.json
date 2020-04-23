@@ -10,14 +10,15 @@
   "type": "library",
   "authors": [
     {
-      "name": "",
-      "email": ""
+      "name": "aleksei4er",
+      "email": "alexey.chyorny@gmail.com"
     }
   ],
   "require": {
     "php": ">=7.2",
     "illuminate/support": "^6.0|^7.0",
-    "guzzlehttp/guzzle": "^6.3"
+    "guzzlehttp/guzzle": "^6.3",
+    "dingo/api": "^3.0.0"
   },
   "require-dev": {
     "orchestra/testbench": "^4.0|^5.0",

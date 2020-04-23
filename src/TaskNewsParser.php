@@ -41,7 +41,7 @@ class TaskNewsParser
     
             foreach ($response['articles'] as $article) {
                 $source = $this->loadSource($article['source']);
-                if ($this->loadArticle($article, $source)) {
+                if ($this->loadArticle($article, $keyword, $source)) {
                     break;
                 }
             }
@@ -52,10 +52,11 @@ class TaskNewsParser
      * Validate and create new article if not exists
      *
      * @param array $article
+     * @param string $keyword
      * @param Source|null $source
      * @return Article|null
      */
-    public function loadArticle(array $article, $source = null)
+    public function loadArticle(array $article, string $keyword, $source = null)
     {
         $validator = Validator::make($article, [
             'author' => 'string|max:255',
@@ -68,7 +69,8 @@ class TaskNewsParser
         ]);
 
         if (!$validator->fails()) {
-            $article['source_id'] = $source->id;
+            $article['source_id'] = $source->id ?? null;
+            $article['keyword'] = $keyword;
             return Article::create($article);
         }
     }

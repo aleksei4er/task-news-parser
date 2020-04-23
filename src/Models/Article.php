@@ -12,8 +12,8 @@ class Article extends Model
      *
      * @var array
      */
-    protected $casts = [
-        'publishedAt' => 'datetime',
+    protected $dates = [
+        'publishedAt',
     ];
 
     /**
@@ -22,6 +22,7 @@ class Article extends Model
      * @var array
      */
     protected $fillable = [
+        'keyword',
         'author',
         'title',
         'description',
