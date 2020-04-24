@@ -7,7 +7,7 @@
 [![Packagist](https://poser.pugx.org/aleksei4er/task-news-parser/d/total.svg)](https://packagist.org/packages/aleksei4er/task-news-parser)
 [![Packagist](https://img.shields.io/packagist/l/aleksei4er/task-news-parser.svg)](https://packagist.org/packages/aleksei4er/task-news-parser)
 
-Package description: CHANGE ME
+Lumen package for test task
 
 ## Installation
 
