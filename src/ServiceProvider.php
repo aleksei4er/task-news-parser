@@ -21,6 +21,8 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
 
     public function register()
     {
+        require_once("helpers.php");
+        
         $this->mergeConfigFrom(
             self::CONFIG_PATH,
             'task-news-parser'
