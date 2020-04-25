@@ -42,6 +42,7 @@ $app->withEloquent();
 
 ```bash
 $app->register(Aleksei4er\TaskNewsParser\ServiceProvider::class);
+$app->register(Dingo\Api\Provider\LumenServiceProvider::class);
 ```
 
 ## Usage
